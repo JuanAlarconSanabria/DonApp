@@ -21,7 +21,6 @@ import java.util.ArrayList;
 public class ShowEventsFragment extends Fragment {
 
 private FragmentShowEventsBinding binding;
-String event;
 
     @Override
     public View onCreateView(
@@ -42,7 +41,7 @@ String event;
         ArrayList<String> events = ((MainActivity)getActivity()).getCurrentEventsStrings();
         for(int i = 0; i < events.size(); i++)
         {
-            event = events.get(i);
+            String event = events.get(i);
             LinearLayout layout = new LinearLayout(getContext());
             layout.setOrientation(LinearLayout.HORIZONTAL);
             TextView rowTextView = new TextView(getContext());

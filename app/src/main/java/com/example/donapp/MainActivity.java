@@ -57,8 +57,6 @@ private Main main;
             main.crearEvento( LocalDateTime.of(2024, Month.JULY, 20, 10, 30),"Bogotá", "Bogotá", null, "Calle 113 # 7 – 80 Oficina 702", "Programa Mujeres Sin Limites", "Fortalecer el liderazgo de mujeres emprendedoras y acelerar el crecimiento de sus negocios a través de capacitación");
             main.crearUsuario("Pineapple", "123", org4);
             main.crearEvento( LocalDateTime.of(2024, Month.JULY, 20, 10, 30),"Amazonas", "Leticia", null, "Cra. 11 #9-43", "Programa jornada de concientización", "Concientizar a la población acerca de la importancia de la protección de las comunidades Indígenas");
-
-
         }
 
     }
@@ -88,11 +86,11 @@ private Main main;
     }
     public void setEventsByCity(String city)
     {
-        main.setCurrentEventsDep(city);
+        main.setCurrentEventsCity(city);
     }
     public void setEventsByOther(String other)
     {
-        main.setCurrentEventsDep(other);
+        main.setCurrentEventsOther(other);
     }
     public void setAllEvents()
     {
