@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearEventoFragment">
+
+    <TextView
+        android:id="@+id/textview_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Escribe el nombre del programa o donación"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNombreEv"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="20dp"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_user" />
+
+    <TextView
+        android:id="@+id/textview_ev_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escribe la descripción del programa o donación"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNombreEv" />
+
+
+    <EditText
+        android:id="@+id/editTextDesEv"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="20dp"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_ev_des" />
+    <TextView
+        android:id="@+id/textview_ev_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona la fecha y hora en que se va a realizar"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextDesEv" />
+
+
+    <Button
+        android:id="@+id/button_text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elije la fecha"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_text_time"
+        app:layout_constraintTop_toBottomOf="@id/textview_ev_time" />
+
+    <Button
+        android:id="@+id/button_text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Elije la hora"
+        app:layout_constraintStart_toEndOf="@id/button_text_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_ev_time" /> />
+
+    <TextView
+        android:id="@+id/textview_loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escribe el departamento y la ciudad o municipio donde se va a realizar"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_text_time" />
+
+    <EditText
+        android:id="@+id/editTextDep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="5dp"
+        android:textSize="17dp"
+        android:hint="Departamento"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_text_time"
+        app:layout_constraintTop_toBottomOf="@id/textview_loc" />
+    <EditText
+        android:id="@+id/editTextCiu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="5dp"
+        android:textSize="17dp"
+        android:hint="Ciudad"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@id/editTextDep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_loc" />
+
+    <TextView
+        android:id="@+id/textview_loc_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opcional: Escribe la Localidad, barrio o vereda"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextDep" />
+
+    <EditText
+        android:id="@+id/editTextOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="15dp"
+        android:hint="Opcional"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_loc_op" />
+
+
+    <TextView
+        android:id="@+id/textview_loc_dir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Escribe la dirección"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextOp" />
+
+    <EditText
+        android:id="@+id/editTextDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Dirección"
+        android:inputType="textPersonName"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_loc_dir" />
+
+    <Button
+        android:id="@+id/button_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <DatePicker
+        android:id="@+id/date_picker"
+        android:layout_width="match_parent"
+        android:calendarViewShown="true"
+        android:spinnersShown="false"
+        android:layout_weight="4"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_ev_time" />
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_ev_time" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

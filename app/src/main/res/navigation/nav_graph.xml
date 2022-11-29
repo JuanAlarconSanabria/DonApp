@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.donapp.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first" >
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_AddFirstFragment"
+            app:destination="@id/AddFirstFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.donapp.SecondFragment"
+        android:label="Elije la ubicación"
+        tools:layout="@layout/fragment_second" >
+
+        <action
+            android:id="@+id/buscar"
+            app:destination="@id/ShowEventsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddFirstFragment"
+        android:name="com.example.donapp.AddFirstFragment"
+        android:label="@string/add_first_fragment_label"
+        tools:layout="@layout/fragment_add_first" >
+        <action
+            android:id="@+id/action_AddFirstFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+        <action
+            android:id="@+id/action_AddFirstFragment_to_SignupFragment"
+            app:destination="@id/SignupFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.donapp.LoginFragment"
+        android:label="@string/login_fragment_label"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_Login"
+            app:destination="@id/CrearEventoFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/SignupFragment"
+        android:name="com.example.donapp.SignupFragment"
+        android:label="@string/signup_fragment_label"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_Signup"
+            app:destination="@id/CrearEventoFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/CrearEventoFragment"
+        android:name="com.example.donapp.CrearEventoFragment"
+        android:label="@string/crear_evento_fragment_label"
+        tools:layout="@layout/fragment_crear_evento" >
+        <action
+            android:id="@+id/action_crear"
+            app:destination="@id/ResFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/ResFragment"
+        android:name="com.example.donapp.ResFragment"
+        android:label="@string/res_fragment_label"
+        tools:layout="@layout/fragment_crear_evento" >
+        <action
+            android:id="@+id/action_volver"
+            app:destination="@id/FirstFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/ShowEventsFragment"
+        android:name="com.example.donapp.ShowEventsFragment"
+        android:label="Programas o donaciones en la unbicación seleccionada"
+        tools:layout="@layout/fragment_show_events" >
+        <action
+            android:id="@+id/volver"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/info"
+            app:destination="@id/EvFragment" />
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/EvFragment"
+        android:name="com.example.donapp.EvFragment"
+        android:label="Información del evento"
+        tools:layout="@layout/fragment_ev" >
+    <action
+        android:id="@+id/action_volver"
+        app:destination="@id/FirstFragment" />
+    </fragment>
+
+
+</navigation>
